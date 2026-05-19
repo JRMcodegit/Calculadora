@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora Moderna</title>
+
+  <!-- Liga o arquivo de estilos -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Caixa principal da calculadora -->
+  <main class="calculator">
+    <!-- Cabeçalho simples -->
+    <header class="calculator__header">
+      <p class="calculator__badge">Calculadora</p>
+      <h1>Simples e moderna</h1>
+    </header>
+
+    <!-- Área onde aparece o cálculo -->
+    <section class="display" aria-label="Tela da calculadora">
+      <div id="history" class="display__history"></div>
+      <div id="result" class="display__result">0</div>
+    </section>
+
+    <!-- Teclado -->
+    <section class="keys" aria-label="Teclado da calculadora">
+      <button class="key key--muted" data-action="clear">C</button>
+      <button class="key key--muted" data-action="delete">⌫</button>
+      <button class="key key--muted" data-action="operator" data-value="%">%</button>
+      <button class="key key--accent" data-action="operator" data-value="/">÷</button>
+
+      <button class="key" data-action="number" data-value="7">7</button>
+      <button class="key" data-action="number" data-value="8">8</button>
+      <button class="key" data-action="number" data-value="9">9</button>
+      <button class="key key--accent" data-action="operator" data-value="*">×</button>
+
+      <button class="key" data-action="number" data-value="4">4</button>
+      <button class="key" data-action="number" data-value="5">5</button>
+      <button class="key" data-action="number" data-value="6">6</button>
+      <button class="key key--accent" data-action="operator" data-value="-">−</button>
+
+      <button class="key" data-action="number" data-value="1">1</button>
+      <button class="key" data-action="number" data-value="2">2</button>
+      <button class="key" data-action="number" data-value="3">3</button>
+      <button class="key key--accent" data-action="operator" data-value="+">+</button>
+
+      <button class="key key--wide" data-action="number" data-value="0">0</button>
+      <button class="key" data-action="decimal">,</button>
+      <button class="key key--success" data-action="equals">=</button>
+    </section>
+  </main>
+
+  <!-- Liga o arquivo JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
