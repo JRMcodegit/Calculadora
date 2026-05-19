@@ -57,7 +57,7 @@ body {
 /* Tela da calculadora */
 .display {
   min-height: 120px;
-  padding: 18px;
+  padding: 24px;
   border-radius: 22px;
   background: rgba(10, 13, 28, 0.55);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -77,26 +77,32 @@ body {
 }
 
 .display__result {
-  font-size: clamp(2rem, 7vw, 3.1rem);
+  font-size: 3rem;
   font-weight: 700;
   text-align: right;
   letter-spacing: 0.02em;
-  word-break: break-all;
   transition: transform 180ms ease;
+  overflow-x: auto;
+  white-space: nowrap;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: ltr;
+  text-align: right;
 }
 
 /* Grade dos botões */
 .keys {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
+  gap: 8px;
 }
 
 /* Estilo base dos botões */
 .key {
   height: 64px;
   border: none;
-  border-radius: 18px;
+  border-radius: 12px;
   font-size: 1.15rem;
   font-weight: 700;
   color: #f6f7ff;
@@ -120,7 +126,8 @@ body {
 
 /* Efeito ao clicar */
 .key:active {
-  transform: translateY(1px) scale(0.98);
+  transform: scale(0.96);
+  filter: brightness(0.9);
 }
 
 /* Botões menos chamativos */
@@ -131,12 +138,12 @@ body {
 
 /* Botões de operação */
 .key--accent {
-  background: linear-gradient(135deg, #6b4eff, #8f7cff);
+  background: #6d5dfc;
 }
 
 /* Botão de igual */
 .key--success {
-  background: linear-gradient(135deg, #25c77c, #20a86a);
+  background: #3fbf6f;
 }
 
 /* Botão maior */
@@ -160,7 +167,7 @@ body {
 /* Pequena adaptação para telas menores */
 @media (max-width: 420px) {
   .calculator {
-    padding: 18px;
+    padding: 24px;
     border-radius: 24px;
   }
 
